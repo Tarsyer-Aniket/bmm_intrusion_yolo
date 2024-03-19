@@ -1,0 +1,10 @@
+[Unit]
+Description=Saying ip address at start service
+
+[Service]
+Type=simple
+WorkingDirectory=/etc/init.d/
+ExecStart=/bin/bash /etc/init.d/sayIPbs start
+
+[Install]
+WantedBy=default.target

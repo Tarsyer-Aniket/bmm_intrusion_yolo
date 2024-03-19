@@ -1,0 +1,13 @@
+[Unit]
+Description=Heart Beat Monitor Service
+
+[Service]
+Type=simple
+Restart=on-failure
+RestartSec=5s
+WorkingDirectory=/home/pi/heartbeat/
+ExecStart=/usr/bin/python3 send_heart_beat.py
+
+[Install]
+WantedBy=default.target
+

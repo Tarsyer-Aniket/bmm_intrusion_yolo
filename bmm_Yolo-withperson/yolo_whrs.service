@@ -1,0 +1,14 @@
+[Unit]
+Description=Yolo WHRS Monitor Service
+
+[Service]
+ExecStartPre=/bin/sleep 30
+Type=simple
+Restart=on-failure
+RestartSec=5s
+WorkingDirectory=/home/pi/Yolo-withperson/
+ExecStart=/usr/bin/python3 main_yolo.py
+
+[Install]
+WantedBy=default.target
+

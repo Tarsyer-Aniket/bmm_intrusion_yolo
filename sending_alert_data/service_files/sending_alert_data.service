@@ -1,0 +1,12 @@
+[Unit]
+Description=Sending alert data to server
+
+[Service]
+Type=simple
+Restart=on-failure
+RestartSec=5s
+WorkingDirectory=/home/pi/sending_alert_data/
+ExecStart=/usr/bin/python3 sending_alert_data.py
+
+[Install]
+WantedBy=default.target

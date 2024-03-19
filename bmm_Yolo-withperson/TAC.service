@@ -1,0 +1,12 @@
+[Unit]
+Description=Tarsyer-Attorney-Client
+
+[Service]
+Type=simple
+Restart=on-failure
+RestartSec=5s
+WorkingDirectory=/home/pi/Tarsyer-Attorney-Client/
+ExecStart=/usr/bin/python3 api_client.py
+
+[Install]
+WantedBy=default.target

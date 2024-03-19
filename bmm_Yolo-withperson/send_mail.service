@@ -1,0 +1,13 @@
+[Unit]
+Description= main send mail Service
+
+[Service]
+Type=simple
+Restart=on-failure
+RestartSec=5s
+WorkingDirectory=/home/pi/sending_mail/
+ExecStart=/usr/bin/python3 main_send_mail.py 
+
+[Install]
+WantedBy=default.target
+
